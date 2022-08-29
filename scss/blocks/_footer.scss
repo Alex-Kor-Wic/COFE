@@ -1,0 +1,126 @@
+.footer {
+    transform: translate(0px, 100px);
+    opacity: 0;
+    transition: all .5s ease;
+    &._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    &__body {
+        padding: 52.25px 0px 31.75px 0px;   
+    }
+
+    // .footer__row
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .footer__line
+    
+    &__line {
+        &:nth-child(2){
+            margin: 7px 0px 16px 0px;
+        }    
+    }
+
+    // .footer__list
+
+    &__list {
+        display: flex;
+        
+    }
+
+    // .footer__item
+
+    &__item {
+        &:not(:last-child){
+            margin: 0px 32px 0px 0px;
+        }
+    }
+
+    // .footer__link
+
+    &__link {
+        color: $FooterBlackColor;
+        font-size: 15px;
+        line-height: 22.4 / 15 * 100%;
+    }
+
+    // .footer__dates
+
+    &__dates {
+        display: flex;
+        & > *:not(:last-child){
+            margin: 0px 16px 0px 0px;
+        }
+    }
+
+    // .footer__date
+
+    &__date {
+        color: $FooterGreyColor;
+        font-size: 13px;
+        line-height: 19.5 /13 * 100%; 
+
+    }
+    @media (max-width:1024px) {
+        &__body {
+            padding: 50px 0px 29px 0px;   
+        }
+        &__item {
+            &:not(:last-child){
+                margin: 0px 28px 0px 0px;
+            }
+        }
+        &__link {
+            font-size: 13px;
+        }
+        &__date {
+            font-size: 11px;
+    
+        }
+    }
+    @media (max-width:669px) {
+        &__body {
+            padding: 30px 0px 19px 0px;   
+        }
+        &__item {
+            &:not(:last-child){
+                margin: 0px 25px 0px 0px;
+            }
+        }
+        &__link {
+            font-size: 10px;
+        }
+        &__date {
+            font-size: 8px;
+    
+        }
+    }
+    @media (max-width:430px) {
+        &__row {
+            flex-direction: row;
+
+        }
+        &__list {
+            flex-direction: column;
+            
+        }
+        &__item {
+            &:not(:last-child){
+                margin: 0px 28px 6px 0px;
+            }
+        }
+        &__link {
+            text-align: center;
+        }
+        &__date {
+            text-align: center;
+    
+        }
+    }
+}

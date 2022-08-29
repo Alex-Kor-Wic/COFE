@@ -1,0 +1,26 @@
+$DarkPinkColor: #D27487;
+$PurpleColor: #4A2B33;
+
+$WhiteColor: #FFFFFF;
+$StandartBlackColor: #222222; 
+
+$LightGreyColor: #E9E9E3;
+$DarkGreyColor: #6F6F64;
+
+$MustardColor: #AA9E54;
+
+$FooterBlackColor: #1F1F1F;
+$FooterGreyColor: #696969;
+
+@mixin TypeTitle($color) {
+    font-size: 18px;
+    color: $color;
+    font-weight: 700;
+    line-height: 21 / 18 * 100%;
+}
+@mixin TypeText($color, $fstyle) {
+    font-size: 32px;
+    color: $color;
+    font-style: $fstyle;
+    line-height: 44.8 / 32 * 100%;
+}   

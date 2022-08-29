@@ -1,0 +1,16 @@
+.page {
+
+
+    &__main-block {
+        padding: 0px 0px 36px 0px;
+    }
+    @media (max-width:669px) {
+        &__main-block {
+            padding: 10px 0px 36px 0px;
+        }
+    }
+}
+.main-block {
+    background-color: $PurpleColor;
+}
+

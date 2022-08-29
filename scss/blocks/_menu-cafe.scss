@@ -1,0 +1,252 @@
+@mixin typeBtn($p2, $p4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 17px $p2 17px $p4;
+    background-color: $LightGreyColor;
+    border: 2px solid $DarkGreyColor;
+    color: $DarkGreyColor;
+    font-size: 15px;
+    line-height: 24 / 15 * 100%;
+}
+
+.page {
+
+    // .page__menu-cafe
+
+    &__menu-cafe {
+        padding: 120px 20px 119.75px 20px;
+    }
+
+    @media (max-width: 1024px) {
+        &__menu-cafe {
+            padding: 100px 0px 99px 0px;
+        }
+    }
+
+    @media (max-width: 994px) {
+        &__menu-cafe {
+            padding: 80px 0px 79px 0px;
+        }
+    }
+
+    @media (max-width: 669px) {
+        &__menu-cafe {
+            padding: 50px 0px 49px 0px;
+        }
+    }
+}
+
+.menu-cafe {
+    background-color: $LightGreyColor ;
+    
+    transform: translate(0px, 100px);
+    opacity: 0;
+    transition: all .5s ease;
+    &._active {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    &__row {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+    }
+
+    // .menu-cafe__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-width: 558px;
+    }
+
+    // .menu-cafe__title
+
+    &__title {
+        @include TypeTitle($DarkGreyColor);
+        margin: 0px 0px 17px 0px;
+    }
+
+    // .menu-cafe__text
+
+    &__text {
+        @include TypeText($DarkGreyColor, normal);
+        margin: 0px 0px 74px 0px;
+    }
+
+    // .menu-cafe__buttons
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &>*:not(:last-child) {
+            padding: 0px 0px 12px 0px;
+        }
+    }
+
+    // .menu-cafe__button
+
+    &__button {
+
+        &:nth-child(1) a {
+            @include typeBtn(223px, 224px);
+        }
+
+        &:nth-child(2) a {
+            @include typeBtn(219px, 219px);
+        }
+
+    }
+
+    // .menu-cafe__menu-image
+
+    &__menu-image {
+        margin: 0px 0px 0px 132.81px;
+    }
+
+    @media (max-width: 1024px) {
+        &__title {
+            font-size: 15px;
+            margin: 0px 0px 14px 0px;
+        }
+
+        &__text {
+            font-size: 29px;
+            margin: 0px 0px 60px 0px;
+        }
+
+        &__buttons {
+            &>*:not(:last-child) {
+                margin: 0px 0px 10px 0px;
+            }
+        }
+        
+        &__button {
+            
+
+            &:nth-child(1) a {
+                @include typeBtn(123px, 124px);
+                
+
+
+            }
+
+            &:nth-child(2) a {
+                @include typeBtn(119px, 119px);
+
+
+
+            }
+
+        }
+        &__menu-image {
+            margin: 0px 0px 0px 60px;
+        }
+    }
+    @media (max-width: 996px) {
+        &__title {
+            font-size: 11px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        &__text {
+            font-size: 25px;
+            margin: 0px 0px 40px 0px;
+        }
+
+        &__buttons {
+            &>*:not(:last-child) {
+                margin: 0px 0px 8px 0px;
+            }
+        }
+        
+        &__button {
+            
+            & a {
+            }
+
+            &:nth-child(1) a {
+                @include typeBtn(113px, 114px);
+                font-size: 12px;
+
+
+
+            }
+
+            &:nth-child(2) a {
+                @include typeBtn(109px, 109px);
+                font-size: 12px;
+
+
+            }
+
+        }
+        &__menu-image {
+            margin: 0px 0px 0px 40px;
+        }
+    }
+    @media (max-width: 669px) {
+        &__row {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__content {
+            justify-content: center;
+            align-items: center;
+        }
+        &__title {
+            font-size: 11px;
+            margin: 0px 0px 8px 0px;
+        }
+
+        &__text {
+            font-size: 25px;
+            margin: 0px 0px 20px 0px;
+            text-align: center;
+        }
+
+        &__buttons {
+            &>*:not(:last-child) {
+                margin: 0px 0px 5px 0px;
+            }
+            margin: 0px 0px 20px 0px;
+    
+        }
+        
+        &__button {
+            
+            & a {
+            }
+
+            &:nth-child(1) a {
+                @include typeBtn(103px, 104px);
+                font-size: 12px;
+
+
+
+            }
+
+            &:nth-child(2) a {
+                @include typeBtn(99px, 99px);
+                font-size: 12px;
+
+
+            }
+
+        }
+        &__menu-image {
+            margin: 0px 0px 0px 0px;
+
+        }
+    }
+
+}
